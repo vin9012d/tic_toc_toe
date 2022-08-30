@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div className="App container" >
-      <h1 className="title">Tic-Toc-Toe App</h1>
+      <h1 className="title">Tic-Tac-Toe App</h1>
       <div className="row" >
         <Square classes1={"b-bottom-right"}  onClick={()=>onUserClicked(0)}  state={gameState[0]}  />
         <Square classes1={"b-bottom-right"} onClick={()=>onUserClicked(1)}  state={gameState[1]}  />
