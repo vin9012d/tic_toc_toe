@@ -78,7 +78,7 @@ function App() {
       </div>
       <button onClick={handleReset} className="reset-btn">Reset Game</button>  
       
-      <h2 className="author">Made with  <span style={{color:"#1CDBF5"}}>❤</span> by Vinod Chaudhari</h2>
+      <h2 className="author ">Made with  <span style={{color:"#1CDBF5"}}>❤</span> by Vinod Chaudhari</h2>
     </div>
   );
 }
