@@ -30,9 +30,13 @@ function App() {
   useEffect(() => {
     let winner = checkWinner();
     console.log(winner,"winner")
-    if (winner) {
+    if (winner=="0" || winner=="X") {
         handleReset();
         alert(`Ta da ! ${winner} won the Game !`)
+    } else if (winner == "tie") {
+    
+      alert(`Tie!!!`)
+      handleReset();
     }
 }, [gameState])
 
@@ -47,11 +51,19 @@ function App() {
       [0, 4, 8],
       [2, 4, 6],
     ];
+    let count = 0;
    
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
+      if (gameState[a] !== "" && gameState[b] !== "" && gameState[c] !== "") {
+        count++;
+}
+
       if (gameState[a] && gameState[a] === gameState[b] && gameState[a] === gameState[c]) {
         return gameState[a];
+      }
+      if (count == 8) {
+        return "tie"
       }
     }
     return null;
